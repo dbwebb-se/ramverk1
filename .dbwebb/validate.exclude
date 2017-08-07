@@ -16,6 +16,7 @@
 -./.venv
 
 -./me/*/vendor/*
+-./me/anax/htdocs/*
 -./me/*/node_modules/*
 
 #-./me/*/platforms/*
