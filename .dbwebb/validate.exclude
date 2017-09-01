@@ -10,12 +10,14 @@
 -*/cache/*
 -*/docs/*
 -*/lib/*
+-*/libs/*
 -*.min.*
 -*.png
 -*.jpg
 -./.venv
 
 -./me/*/vendor/*
+-./me/*/htdocs/css/*
 -./me/*/htdocs/cimage/*
 -./me/*/node_modules/*
 
