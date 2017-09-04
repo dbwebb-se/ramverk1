@@ -17,6 +17,7 @@
 /me/
 - /me/anax/.bin
 - /me/anax/build
+- /me/anax/theme
 - /me/anax/cache/cimage/*
 - vendor/mos/cimage/webroot
 - vendor/**/config
