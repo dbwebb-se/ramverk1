@@ -30,11 +30,40 @@ ramverk1last()
 
 
 #
+# Check details on the repo
+#
+function ramverk1repo()
+{
+    local repo="$1"
+    local target="me/$repo"
+    
+    headerForTest "-- Repo $repo" "-- ${DBW_WWW}$DBW_COURSE/$target" 
+    openFilesInEditor "$target"
+    printUrl "" "$target"  
+
+    isGitRepo "$target"
+    hasGitTagBetween "$EXEC_DIR/$repo" "$2" "$3" > /dev/null
+
+    inspectCommand "" "$EXEC_DIR/$repo" "git remote -v" ""
+    inspectCommand "" "$EXEC_DIR/$repo" "git tag" ""
+    inspectCommand "" "$EXEC_DIR/$repo" "git status" ""
+    inspectCommand "" "$EXEC_DIR/$repo" "git log -n 20 --pretty=format:\"%h_%ad_:_%s%d_[%an]\" --graph --date=short" ""
+    inspectCommand "" "$EXEC_DIR/$repo" "git stash" ""
+    inspectCommand "" "$EXEC_DIR/$repo" "git checkout -b inspect $tag" ""
+
+    # All repos does not include make test
+    # Make test need test environment
+    #inspectCommand "Makefile" "$EXEC_DIR/$repo" "make install test" ""
+}
+
+
+
+#
 # Test ramverk1 kmom01
 #
 ramverk1kmom01()
 {
-    :
+    ramverk1repo "anax" "1.0.0" "2.0.0"
 }
 
 
@@ -44,7 +73,7 @@ ramverk1kmom01()
 #
 ramverk1kmom02()
 {
-    :
+    ramverk1repo "anax" "2.0.0" "3.0.0"
 }
 
 
@@ -54,7 +83,7 @@ ramverk1kmom02()
 #
 ramverk1kmom03()
 {
-    :
+    ramverk1repo "anax" "3.0.0" "4.0.0"
 }
 
 
@@ -64,7 +93,7 @@ ramverk1kmom03()
 #
 ramverk1kmom04()
 {
-    :
+    ramverk1repo "anax" "4.0.0" "5.0.0"
 }
 
 
@@ -73,7 +102,7 @@ ramverk1kmom04()
 #
 ramverk1kmom05()
 {
-    :
+    ramverk1repo "anax" "5.0.0" "6.0.0"
 }
 
 
@@ -83,7 +112,7 @@ ramverk1kmom05()
 #
 ramverk1kmom06()
 {
-    :
+    ramverk1repo "anax" "6.0.0" "7.0.0"
 }
 
 
@@ -93,5 +122,5 @@ ramverk1kmom06()
 #
 ramverk1kmom10()
 {
-    :
+    ramverk1repo "anax" "10.0.0" "11.0.0"
 }
