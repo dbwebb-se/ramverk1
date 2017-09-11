@@ -24,7 +24,7 @@ ramverk1()
 #
 ramverk1last()
 {
-    inspectMe "me/redovisa" "me.html" "redovisning.html" "" "redovisa"
+    inspectMe "me/anax/htdocs" "" "" "" "anax"
 }
 
 
