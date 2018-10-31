@@ -16,10 +16,14 @@
 -*.jpg
 -./.venv
 
--./me/*/vendor/*
--./me/*/htdocs/css/*
--./me/*/htdocs/cimage/*
--./me/*/node_modules/*
+-./*/redovisa/*
+-./*/vendor/*
+-./*/node_modules/*
+
+#-./me/*/vendor/*
+#-./me/*/htdocs/css/*
+#-./me/*/htdocs/cimage/*
+#-./me/*/node_modules/*
 
 #-./me/*/platforms/*
 #+./me/*/platforms/browser/www/*.html
