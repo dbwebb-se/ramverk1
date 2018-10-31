@@ -36,5 +36,5 @@ Feel free to help building up the repository with more content suited for traini
 
 ```
  .
-..:  Copyright (c) 2017 Mikael Roos et al, mos@dbwebb.se
+..:  Copyright (c) 2017 - 2018 Mikael Roos et al, mos@dbwebb.se
 ```
