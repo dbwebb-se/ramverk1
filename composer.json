@@ -1,0 +1,20 @@
+{
+    "name" : "dbwebb/ramverk1",
+    "description": "Course material for ramverk1.",
+    "homepage": "https://github.com/dbwebb-se/ramverk1",
+    "license": "MIT",
+    "keywords": ["dbwebb", "education", "course"],
+    "authors": [
+        {
+            "name": "Mikael Roos",
+            "email": "mos@dbwebb.se"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/dbwebb-se/ramverk1/issues",
+        "source": "https://github.com/dbwebb-se/ramverk1"
+    },
+    "require": {
+        "php": "^7.2"
+    }
+}
