@@ -1,7 +1,9 @@
 Web based frameworks 1 - ramverk1
 ===================
 
+[![Latest Stable Version](https://poser.pugx.org/dbwebb/ramverk1/v/stable)](https://packagist.org/packages/dbwebb/ramverk1)
 [![Join the chat at https://gitter.im/dbwebb-se/ramverk1](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dbwebb-se/ramverk1?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Build Status](https://travis-ci.org/dbwebb-se/ramverk1.svg)](https://travis-ci.org/dbwebb-se/ramverk1)
 [![CircleCI](https://circleci.com/gh/dbwebb-se/ramverk1.svg?style=svg)](https://circleci.com/gh/dbwebb-se/ramverk1)
 

@@ -1,9 +1,7 @@
 language: php
 
 php:
-   - 5.6
-   - "7.0"
-   - "7.1"
+   - 7.2
    - hhvm
    - nightly
 
@@ -42,7 +40,7 @@ before_script:
 
 script:
     # Run tests
-    - make test
+    - make check test
 
 
 
