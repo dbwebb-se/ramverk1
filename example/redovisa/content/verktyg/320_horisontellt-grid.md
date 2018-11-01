@@ -13,17 +13,19 @@ Du kan klicka på länken [som visar denna sida med dess grid](verktyg/horisonte
 Du kan visa gridet för godtycklig sida genom att lägga till `?hgrid` i slutet av sidans länk.
 
 
-
+<!--
 Ett magiskt nummer
 -------------------------
 
-TBD.
+
+-->
 
 
 
-Modulen desinax/typografic-grid
+
+Modulen desinax/typographic-grid
 -------------------------
 
-I uppgiften använder du en LESS modul [desinax/typografic-grid](https://github.com/desinax/typografic-grid/) som implementerar ett typografiskt grid. Studera modulens README så får du exempel på hur ett typografiskt grid kan byggas upp med html och style.
+I uppgiften använder du en LESS modul [desinax/typographic-grid](https://github.com/desinax/typographic-grid/) som implementerar ett typografiskt grid. Studera modulens README så får du exempel på hur ett typografiskt grid kan byggas upp med html och style.
 
-Du kan testa ett par exempel på [hur modulen fungerar på dess webbplats](https://desinax.github.io/typografic-grid/htdocs/).
+Du kan testa ett par exempel på [hur modulen fungerar på dess webbplats](https://desinax.github.io/typographic-grid/htdocs/).

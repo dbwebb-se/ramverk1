@@ -6,6 +6,10 @@
 # Include functions.bash
 source .anax/scaffold/functions.bash
 
+# Set default build files
+cp vendor/anax/anax-ramverk1-me/.travis_default.yml .travis.yml
+cp vendor/anax/anax-ramverk1-me/.circleci/config_default.yml .circleci/config.yml
+
 # Get/remove items from config/.
 rsync -a vendor/anax/anax-ramverk1-me/config ./
 rm -f config/navbar.php
@@ -22,6 +26,12 @@ rm htdocs/css/style.css
 
 # Get/remove items from src/.
 rsync -a vendor/anax/anax-ramverk1-me/src ./
+
+# Copy the source for Controllers.
+rsync -a vendor/anax/controller/src/Controller/{Development,ErrorHandler,FlatFileContent,Sample}Controller.php ./src/Controller/
+
+# Copy the source for Page.
+rsync -a vendor/anax/page/src/Page/Page.php ./src/Page/
 
 # Get the Makefile.
 rsync -a vendor/anax/anax-ramverk1-me/Makefile ./
