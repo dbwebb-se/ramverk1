@@ -19,4 +19,4 @@ git clone https://github.com/desinax/theme-dbwebb.se.git theme
 rm -rf theme/.git
 ```
 
-Därefte rkan du börja jobba med temat som det beskrivs i artikeln "[Bygg eget tema](./../bygg-eget-tema)"
+Därefter kan du börja jobba med temat som det beskrivs i artikeln "[Bygg eget tema](./../bygg-eget-tema)"
