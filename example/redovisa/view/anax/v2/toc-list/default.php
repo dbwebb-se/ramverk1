@@ -13,7 +13,7 @@ namespace Anax\View;
 
 ?><ul>
 
-    <?php foreach ($toc as $route => $link) : 
+    <?php foreach ($toc as $route => $link) :
         $url  = url($route);
         $text = $link["title"]; // Should be text?
         $title = null; // Missmatch with $link["title"]

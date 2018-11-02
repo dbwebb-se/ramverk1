@@ -1,6 +1,6 @@
 <?php
 /**
- * Flat file controller for reading markdown files from content/..
+ * Load the stylechooser as a controller class.
  */
 return [
     "routes" => [

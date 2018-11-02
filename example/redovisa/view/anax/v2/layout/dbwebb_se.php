@@ -216,19 +216,19 @@ $class .= $sidebarRight ? "has-sidebar-right " : "";
 $class .= empty($class) ? "" : "has-sidebar";
 ?>
 
-            <?php if ($sidebarLeft): ?>
+            <?php if ($sidebarLeft) : ?>
             <div class="wrap-sidebar region-sidebar-left <?= $class ?>" role="complementary">
                 <?php renderRegion("sidebar-left")?>
             </div>
             <?php endif; ?>
 
-            <?php if (regionHasContent("main")): ?>
+            <?php if (regionHasContent("main")) : ?>
             <main class="region-main <?= $class ?>" role="main">
                 <?php renderRegion("main")?>
             </main>
             <?php endif; ?>
 
-            <?php if ($sidebarRight): ?>
+            <?php if ($sidebarRight) : ?>
             <div class="wrap-sidebar region-sidebar-right <?= $class ?>" role="complementary">
                 <?php renderRegion("sidebar-right")?>
             </div>
