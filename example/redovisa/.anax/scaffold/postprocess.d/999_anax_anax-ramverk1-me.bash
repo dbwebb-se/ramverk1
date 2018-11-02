@@ -6,9 +6,9 @@
 # Include functions.bash
 source .anax/scaffold/functions.bash
 
-# Set default build files
-cp vendor/anax/anax-ramverk1-me/.travis_default.yml .travis.yml
-cp vendor/anax/anax-ramverk1-me/.circleci/config_default.yml .circleci/config.yml
+# # Set default build files
+# cp vendor/anax/anax-ramverk1-me/.travis_default.yml .travis.yml
+# cp vendor/anax/anax-ramverk1-me/.circleci/config_default.yml .circleci/config.yml
 
 # Get/remove items from config/.
 rsync -a vendor/anax/anax-ramverk1-me/config ./
