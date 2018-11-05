@@ -49,7 +49,7 @@ class StyleChooserController implements ContainerInjectableInterface
      */
     public function initialize() : void
     {
-        foreach(glob("{$this->cssDir}/*.css") as $file) {
+        foreach (glob("{$this->cssDir}/*.css") as $file) {
             $filename = basename($file);
             $url = "{$this->cssUrl}/$filename";
             $content = file_get_contents($file);
@@ -115,7 +115,6 @@ class StyleChooserController implements ContainerInjectableInterface
         $session = $this->di->get("session");
         $key = $request->getPost("stylechooser");
 
-        $flashMessage = null;
         if ($key === "none") {
             $session->set("flashmessage", "Unsetting the style and using deafult style.");
             $session->set(self::$key, null);
@@ -140,13 +139,11 @@ class StyleChooserController implements ContainerInjectableInterface
     public function updateActionGet($style) : object
     {
         $response = $this->di->get("response");
-        $request = $this->di->get("request");
         $session = $this->di->get("session");
 
         $key = $this->cssUrl . "/" . $style . ".css";
         $keyMin = $this->cssUrl . "/" . $style . ".min.css";
 
-        $flashMessage = null;
         if ($style === "none") {
             $session->set("flashmessage", "Unsetting the style and using the default style.");
             $session->set(self::$key, null);

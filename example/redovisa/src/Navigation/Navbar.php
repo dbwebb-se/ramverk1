@@ -67,6 +67,10 @@ class Navbar
      * @param array $config with configuration for the menu.
      *
      * @return string with html for the menu.
+     *
+     * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+     * @SuppressWarnings(PHPMD.NPathComplexity)
+     * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
      */
     public function createMenuWithSubMenus($config)
     {

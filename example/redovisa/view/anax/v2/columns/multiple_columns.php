@@ -26,10 +26,11 @@ $classes = isset($classes) ? $classes : null;
 
 
 <?php $i = 1; foreach ($columns as $column) :
-    $template = isset($column["template"])
-        ? $column["template"]
-        : __DIR__ . "/../block/default";
-?>
+        $template = isset($column["template"])
+            ? $column["template"]
+            : __DIR__ . "/../block/default";
+    ?>
+
     <div <?= classList("column $outerClass") ?>>
 
         <?php
@@ -38,10 +39,12 @@ $classes = isset($classes) ? $classes : null;
             ? $column["data"]
             : $column;
         renderView($template, $data);
-            ?>
+        ?>
 
     </div>
-<?php $i++;
+
+    <?php
+    $i++;
 endforeach; ?>
 
 </div>
