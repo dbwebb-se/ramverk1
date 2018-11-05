@@ -35,6 +35,7 @@ function main
 
     # src files
     rsync -av $from/src/Controller/SampleController.php $to/src/Controller/
+    rsync -av $from/src/Controller/SampleJsonController.php $to/src/Controller/
     rsync -av $from/src/Navigation $to/src/
     rsync -av $from/src/StyleChooser $to/src/
 
@@ -42,6 +43,12 @@ function main
     rsync -av $from/view/anax/v2/columns/multiple_columns.php $to/view/anax/v2/columns/
     rsync -av $from/view/anax/v2/layout/dbwebb_se.php $to/view/anax/v2/layout/
     rsync -av $from/view/anax/v2/toc-list/default.php $to/view/anax/v2/toc-list/
+
+    # router
+    rsync -av $from/config/router/500_sample-json-controller.php $to/config/router/
+
+    # test
+    rsync -av $from/test/Controller $to/test/
 }
 
 main

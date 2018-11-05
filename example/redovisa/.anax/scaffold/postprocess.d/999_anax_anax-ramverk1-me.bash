@@ -28,7 +28,10 @@ rm htdocs/css/style.css
 rsync -a vendor/anax/anax-ramverk1-me/src ./
 
 # Copy the source for Controllers.
-rsync -a vendor/anax/controller/src/Controller/{Development,ErrorHandler,FlatFileContent,Sample}Controller.php ./src/Controller/
+rsync -a vendor/anax/controller/src/Controller/{Development,ErrorHandler,FlatFileContent,Sample,SampleJson}Controller.php ./src/Controller/
+
+# Add test for controllers
+rsync -a vendor/anax/anax-ramverk1-me/test_sample/ ./test/
 
 # Copy the source for Page.
 rsync -a vendor/anax/page/src/Page/Page.php ./src/Page/
