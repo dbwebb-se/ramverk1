@@ -6,6 +6,7 @@ Exemplifiera SOLID?
 
 Använd REM-servern för att föreläsa och visa MVC.
 Kan kräva uppgradering till senaste versionen av Anax.
+Scaffolda REM server?
 
 Prata om enhetstestning av REM servern.
 
