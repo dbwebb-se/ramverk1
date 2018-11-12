@@ -34,7 +34,7 @@ Migrera till nyaste utgåvan
 ```text
 # Gå till rooten av kursrepot
 dbwebb update
-bash example/migrate/redovisa_1.bash
+bash example/migrate/redovisa_01.bash
 ```
 
 
