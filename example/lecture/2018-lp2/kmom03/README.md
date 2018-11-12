@@ -9,3 +9,5 @@ Se vad PHP FIG säger om hur man implementerar en DI.
 Är PHP FIG en bra sak?
 
 Prata om/lägg till Cache och/eller Log.
+
+Använd anax/proxy, prata om dess upplägg.
