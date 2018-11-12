@@ -1,8 +1,10 @@
 Notes to lecture
 ========================
 
-Prata om MVC.
-Exemplifiera SOLID?
+
+
+TODO
+------------------
 
 Använd REM-servern för att föreläsa och visa MVC.
 Kan kräva uppgradering till senaste versionen av Anax.
@@ -15,6 +17,14 @@ Nämn och visa Docker för att köra REM servern.
 Visa Docker för att köra me/redovisa?
 
 Visa cURL med PHP (mot REM servern?).
+
+
+
+Slides
+----------------------
+
+Prata om MVC.
+Exemplifiera SOLID?
 
 Prata om tunna kontrollers.
 Prata om dumma vyer.
