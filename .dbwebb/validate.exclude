@@ -17,6 +17,7 @@
 -./.venv
 
 -./*/redovisa/*
+-./*/proj/*
 -./*/vendor/*
 -./*/node_modules/*
 
