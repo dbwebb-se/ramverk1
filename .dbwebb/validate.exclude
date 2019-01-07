@@ -16,8 +16,8 @@
 -*.jpg
 -./.venv
 
+-./*/redovisa/*
 -./me/kmom10/*
--./*/proj/*
 -./*/vendor/*
 -./*/node_modules/*
 
