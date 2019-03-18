@@ -11,6 +11,13 @@ dbwebb init-me
 # Kmom01
 #
 
+#
+# redovisa
+#
+rsync -a example/redovisa me
+cd me/redovisa && composer install --no-dev
+cd me/redovisa && chmod 777 cache/*
+#dbwebb validate redovisa
 
 
 
