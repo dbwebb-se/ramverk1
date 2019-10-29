@@ -16,6 +16,11 @@ require ANAX_INSTALL_PATH . "/vendor/autoload.php";
 $di = new Anax\DI\DIFactoryConfig();
 $di->loadServices(ANAX_INSTALL_PATH . "/config/di");
 
+// // Add anax/proxy access to $id, if available
+// if (class_exists("\Anax\Proxy\ProxyDIFactory")) {
+//     \Anax\Proxy\ProxyDIFactory::init($di);
+// }
+
 // Send the response that the router returns from the route handler
 $di->get("response")->send(
     $di->get("router")->handle(
