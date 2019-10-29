@@ -13,6 +13,7 @@
 /.*.json
 
 /example/
+- /example/**/node_modules/*
 /example/**
 
 /me/
