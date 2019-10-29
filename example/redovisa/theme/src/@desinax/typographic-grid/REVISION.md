@@ -3,6 +3,42 @@ Revision History
 
 
 
+v1.1.3 (2018-12-03)
+------------------------
+
+* Add mixin .showGridAlt(@gridColor) that draws a flexible background image to show the grid, without the need of a grid image.
+
+
+
+v1.1.2 (2018-11-12)
+------------------------
+
+* typographyCodeElements was not using the setting fontFamilyCode.
+
+
+
+v1.1.1 (2018-11-07)
+------------------------
+
+* Bump version.
+
+
+
+v1.1.0 (2018-10-26)
+------------------------
+
+* The grid now consists of typography-font-families.less and typography-defaults.less.
+* Documentation written and published with examples on GitHub Pages.
+
+
+
+v1.0.6 (2018-10-15)
+------------------------
+
+* Fix. H3 border color used color from H2.
+
+
+
 v1.0.5 (2018-10-05)
 ------------------------
 
