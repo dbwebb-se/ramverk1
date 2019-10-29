@@ -7,6 +7,7 @@ v1.1.* (2019-10-29)
 -------------------
 
 * Uppdaterad Makefile.
+* Update versions of package.json.
 
 
 
