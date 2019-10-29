@@ -3,6 +3,13 @@ Revision History
 
 
 
+v1.1.0 (2019-10-29)
+-------------------
+
+* Prepare for ht19 version of course.
+
+
+
 v1.0.3 (2018-10-31)
 -------------------
 
