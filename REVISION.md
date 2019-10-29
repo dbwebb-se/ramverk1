@@ -6,8 +6,10 @@ Revision History
 v1.1.* (2019-10-29)
 -------------------
 
-* Uppdaterad Makefile.
+* Update Makefile.
 * Update versions of package.json.
+* Update example/redovisa.
+* Update example/redovisa/theme.
 
 
 
