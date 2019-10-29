@@ -3,7 +3,7 @@ Revision History
 
 
 
-v1.1.* (2019-10-29)
+v1.1.1 (2019-10-29)
 -------------------
 
 * Update Makefile.
