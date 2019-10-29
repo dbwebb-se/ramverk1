@@ -51,6 +51,35 @@
 
 
 /**
+ * Vertical grid
+ */
+@import "@desinax/vertical-grid/less/grid.less";
+
+html.vgrid .inner-wrap {
+    @gridImage: "../img/theme/grid_@{columns}x@{columnWidth}x@{gutterWidth}-nomargin.png";
+    #desinax-vgrid.showGrid(@gridImage, 1100px);
+
+    &.inner-wrap-header,
+    &.inner-wrap-footer {
+        #desinax-vgrid.showGrid(@gridImage);
+    }
+}
+
+
+
+/**
+ * Typographic grid in namespace #desinax-hgrid.
+ */
+@import "@desinax/typographic-grid/less/typography-font-families.less";
+@import "@desinax/typographic-grid/less/typography-defaults.less";
+
+html.hgrid .inner-wrap {
+    #desinax-hgrid.showGridAlt();
+}
+
+
+
+/**
  * Figure and figcaption mixins, namespace #desinax-figure. You must enable
  * the style you want and add layout.
  */
@@ -60,11 +89,7 @@
 
 // Enable style from the module and add layout
 figure.figure {
-    #desinax-figure.figure();
-    margin-bottom: @magicNumber - 4px;
-    figcaption {
-        padding-top: @magicNumber / 2;
-    }
+    #desinax-figure.figure(1100px);
 }
 
 figure.asciinema {
@@ -72,42 +97,15 @@ figure.asciinema {
     #desinax-figure.asciinema();
 }
 
-figure.codepen,
-figure.figure-codepen {
+figure.figure-codepen, // @TODO remove this?
+figure.codepen {
     &:extend(figure.figure);
     #desinax-figure.codepen();
- }
+}
 
+// @TODO remove this?
 img.responsive {
     max-width: 100%;
-}
-
-
-
-/**
- * Vertical grid
- */
-@import "@desinax/vertical-grid/less/grid.less";
-
-html.vgrid .inner-wrap {
-    @gridImage: "../img/theme/grid950x24x30x10-nomargin.png";
-    #desinax-vgrid.showGrid(1100px, @gridImage);
-
-    &.inner-wrap-header {
-        #desinax-vgrid.showGrid(100%, @gridImage);
-    }
-}
-
-
-
-/**
- * Typographic grid in namespace #desinax-hgrid.
- */
-@import "@desinax/typographic-grid/less/typography.less";
-
-html.hgrid .inner-wrap {
-    @gridImage: "../img/theme/magic-number-24.png";
-    #desinax-hgrid.showGrid(@gridImage);
 }
 
 
@@ -188,6 +186,8 @@ html.hgrid .inner-wrap {
 @import "layout/layout_v2.less";
 @import "layout/dbwebb-se_v2.less"; // Rearrange and move classic style to layout.less
 @import "layout/regions.less";
+
+
 
 .site-logo {
     position: absolute;

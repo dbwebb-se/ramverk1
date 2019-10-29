@@ -181,6 +181,7 @@
 
 }*/
 
+.main, // @TODO remove when using new layout from Anax.
 .region-main {
     #desinax-vgrid.column(@columns * 3 / 4);
     #desinax-vgrid.push(2);
@@ -201,11 +202,16 @@
     }
 }
 
+// @TODO remove .sidebar-right .sidebar-left when using new layout from Anax.
+.sidebar-right,
+.sidebar-left,
 .region-sidebar-right,
 .region-sidebar-left {
     #desinax-vgrid.column(@columns / 4 + 1);
 }
 
+// @TODO remove .sidebar-right .sidebar-left when using new layout from Anax.
+.sidebar-right,
 .region-sidebar-right {
     #desinax-vgrid.push(1);
 }
@@ -218,6 +224,7 @@
 
 @media screen and (max-width: 650px) {
 
+    .main, // @TODO remove when using new layout from Anax.
     .region-main {
         min-height: initial;
         
@@ -240,9 +247,13 @@
         }
     }
 
+    // @TODO remove .sidebar-right .sidebar-left when using new layout from Anax.
+    .sidebar-right,
+    .sidebar-left,
     .region-sidebar-right,
     .region-sidebar-left {
-        display: none;
+        #desinax-vgrid.column(@columns);
+        #desinax-vgrid.push(0);
     }
 
     .col3 {

@@ -2,6 +2,18 @@ Revision History
 =======================
 
 
+v1.1.0 (2018-12-03)
+------------------------
+
+* Updated how responsive classes work.
+* Added local instance of @magicNumber to use for margins.
+* Use em instead of px for margins when floating.
+* Added README for documentation.
+* Added examples in htdocs/.
+* Published on GitHub pages.
+
+
+
 v1.0.11 (2018-10-05)
 ------------------------
 

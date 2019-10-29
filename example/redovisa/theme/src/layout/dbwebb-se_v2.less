@@ -62,18 +62,40 @@
     }
 }
 
+.logo-1 {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+}
+
 // MOVE TO SPECIFIC
-@media screen and (max-width: 1700px) {
+@media screen and (max-width: 1750px) {
+    .logo-1, // @TODO Remove when movin to new Anax layout
+    .site-logo img {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 1550px) {
+    .logo-1, // @TODO Remove when movin to new Anax layout
     .site-logo img {
         width: 150px;
     }
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1400px) {
+    .logo-1, // @TODO Remove when movin to new Anax layout
+    .site-logo img {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 1350px) {
     .site-logo-text-icon img {
         display: inline;
     }
 
+    .logo-1, // @TODO Remove when movin to new Anax layout
     .site-logo {
         display: none;
     }
