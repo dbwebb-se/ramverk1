@@ -41,6 +41,10 @@ Tanken är att ge er insyn i ett större och mer avancerat projekt där man jobb
 * Automatiserad testning och continous integration (CI)
 * (Docker)
 
+eller 
+
+> "Allt meck runtomkring som hindrar/hjälper mig att koda och prata kod."
+
 
 
 
