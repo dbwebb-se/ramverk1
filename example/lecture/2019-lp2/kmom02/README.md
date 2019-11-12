@@ -38,17 +38,6 @@ Prata om och visa:
 
 
 
-Migrera till nyaste utgåvan
-----------------------
-
-```text
-# Gå till rooten av kursrepot
-dbwebb update
-bash example/migrate/redovisa_01.bash
-```
-
-
-
 Hur länka
 ----------------------
 
@@ -68,3 +57,6 @@ https://github.com/canax/request/blob/master/test/Request/RequestTest.php#L19-L3
 https://github.com/canax/request/blob/master/src/Request/Request.php#L66-L86
 
 Provider
+
+Mock för rest tjänst
+Mock för avancerad klass
