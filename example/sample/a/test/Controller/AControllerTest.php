@@ -46,7 +46,7 @@ class AControllerTest extends TestCase
         // Test the controller action
         $res = $controller->indexAction();
         $body = $res->getBody();
-        $this->assertContains("HELLO A", $body);
+        $this->assertStringContainsString("HELLO A", $body);
     }
 
 
@@ -64,5 +64,18 @@ class AControllerTest extends TestCase
         $res = $controller->redirectAction();
         $this->assertInstanceOf("Anax\Response\Response", $res);
         $this->assertInstanceOf("Anax\Response\ResponseUtility", $res);
+
+        // Check where to the redirect is (do you really need to assert this?)
+        $headers = $res->getHeaders();
+        //var_dump($headers);
+        $hasLocationHeader = false;
+        foreach ($headers as $header) {
+            if (substr($header, 0, 10) === "Location: ") {
+                $hasLocationHeader = true;
+                // The last part (a) is the url whereto redirect
+                $this->assertRegExp('/Location: .*a$/', $header);
+            }
+        }
+        $this->assertTrue($hasLocationHeader);
     }
 }
