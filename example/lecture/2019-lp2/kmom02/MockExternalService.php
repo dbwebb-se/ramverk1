@@ -7,10 +7,10 @@ namespace Anax\GetTag;
  */
 class MockGeoTagService extends GeoTagService
 {
-    public function mapIpToGeoTag($ip)
+    public function mapIpToGeoTag($ipAddress)
     {
         return [
-            "ip" => $ip,
+            "ip" => $ipAddress,
             "valid" => true,
         ];
     }
