@@ -4,6 +4,8 @@ namespace Anax\Users;
 
 /**
  * A model class retrievieng data from an external server.
+ *
+ * @SuppressWarnings(PHPMD.ShortVariable)
  */
 class Users
 {
