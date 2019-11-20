@@ -14,5 +14,8 @@ Each sample has a set of files and an explanation i the corresponding `[sample]/
 
 These are the sample programs.
 
-* [a](a) A controller doing redirect, with test cases showing off how to test a redirect.
-* [b](b) A controller using a model to retrieve information from an external REST server using `file_get_contents()`, `curl()` and `multi_curl()`. A test class for the controller.
+| Sample | Description |
+|:------:|-------------|
+| [a](a) | A controller doing redirect, with test cases showing off how to test a redirect. |
+| [b](b) | A controller using a model to retrieve information from an external REST server using `file_get_contents()`, `curl()` and `multi_curl()`. A test class for the controller. |
+| [c](c) | Use a class as a service in $di from a controller. Test the controller and the class. Use a mock class to hide the class when testing the controller. |
