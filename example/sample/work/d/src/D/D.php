@@ -78,8 +78,8 @@ class D
     public function getMessage() : string
     {
         return $this->message
-            . "Class has \$di:      " . $di ? "NO" : "YES"
-            . "Class has \$session: " . $session ? "NO" : "YES";
+            . "Class has \$di:      " . $this->di ? "NO" : "YES"
+            . "Class has \$session: " . $this->session ? "NO" : "YES";
     }
 
 
