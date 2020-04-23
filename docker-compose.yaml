@@ -1,59 +1,79 @@
 version: "3"
+
+volumes:
+    mysql_data: {}
+    mariadb_data: {}
+
 services:
-    # Complete course repos
-    course-databas:
-        image: dbwebb/courserepo:databas
-        ports: [ "10042:80" ]
-    course-oophp:
-        image: dbwebb/courserepo:oophp
-        ports: [ "10042:80" ]
+    # Primary services to use with this course
+    ramverk1: &ramverk1
+        image: dbwebb/courserepo:ramverk1
+        volumes:
+            - ".:/home/dbwebb/repo"
+            - "/home/dbwebb/repo/bin"
+            - "/home/dbwebb/repo/build"
+            - "/home/dbwebb/repo/node_modules"
+            - "/home/dbwebb/repo/vendor"
+            - "./example/sql/inspect/my.cnf:/home/dbwebb/.my.cnf"
 
-    # Course repo
     cli:
+        <<: *ramverk1
+
+    server:
+        <<: *ramverk1
+        ports:
+            - "18080:80"
+
+    courserepo:
         image: dbwebb/courserepo:cli
-        volumes: [ ".:/home/dbwebb/repo" ]
-    course:
-        image: dbwebb/courserepo
-        volumes: [ ".:/home/dbwebb/repo" ]
-        ports: [ "10042:80" ]
-    web:
-        image: dbwebb/courserepo:web
-        volumes: [ ".:/home/dbwebb/repo" ]
-        ports: [ "10042:80" ]
+        volumes:
+            - ".:/home/dbwebb/repo"
+            #- "/home/dbwebb/repo/bin"
+            #- "/home/dbwebb/repo/build"
+            #- "/home/dbwebb/repo/node_modules"
+            #- "/home/dbwebb/repo/vendor"
+            - "./example/sql/inspect/my.cnf:/home/dbwebb/.my.cnf"
+
+
+
+    # Add support for mysql and mariadb
+    mariadb:
+        container_name: mariadb
+        image: mariadb/server:latest
+        restart: always
+        ports:
+            - "13306:3306"
+        environment:
+            MARIADB_ROOT_PASSWORD: pass
+        volumes:
+            - mariadb_data:/var/lib/mysql
+            - ./example/sql.d/mariadb:/docker-entrypoint-initdb.d
+            - ./example/sql/inspect/mariadb_my.cnf:/root/.my.cnf
+
+    mysql:
+        container_name: mysql
+        image: mysql:latest
+        restart: always
+        command: --default-authentication-plugin=mysql_native_password
+        ports:
+            - "13306:3306"
+        environment:
+            MYSQL_ROOT_PASSWORD: pass
+        volumes:
+            - mysql_data:/var/lib/mysql
+            - ./example/sql.d/mysql:/docker-entrypoint-initdb.d
+            - ./example/sql/inspect/mysql_my.cnf:/root/.my.cnf
+
+    # Anax images to test various PHP versions
+    php:
+        image: anax/dev:php73-cli
+        volumes:
+            - .:/home/anax/repo
+
     apache:
-        image: dbwebb/courserepo:apache
-        volumes: [ ".:/home/dbwebb/repo" ]
-        ports: [ "10042:80" ]
-
-    # Base images
-    base-all:
-        image: dbwebb/courserepo:base-all
-        volumes: [ ".:/home/dbwebb/repo" ]
-        ports: [ "10042:80" ]
-    base-apache:
-        image: dbwebb/courserepo:base-apache
-        volumes: [ ".:/home/dbwebb/repo" ]
-        ports: [ "10042:80" ]
-    base-php:
-        image: dbwebb/courserepo:base-php
-        volumes: [ ".:/home/dbwebb/repo" ]
-    base-python:
-        image: dbwebb/courserepo:base-python
-        volumes: [ ".:/home/dbwebb/repo" ]
-    base-node:
-        image: dbwebb/courserepo:base-node
-        volumes: [ ".:/home/dbwebb/repo" ]
-    base:
-        image: dbwebb/courserepo:base
-        volumes: [ ".:/home/dbwebb/repo" ]
-
-    # Debian installations
-    jessie:
-        image: dbwebb/courserepo:jessie
-        volumes: [ ".:/home/dbwebb/repo" ]
-    stretch:
-        image: dbwebb/courserepo:stretch
-        volumes: [ ".:/home/dbwebb/repo" ]
-    buster:
-        image: dbwebb/courserepo:buster
-        volumes: [ ".:/home/dbwebb/repo" ]
+        image: anax/dev:php73-apache
+        ports:
+            - "18080:80"
+        volumes:
+            - .:/app
+            - ./example/docker/site_default.conf:/etc/apache2/sites-enabled/000-default.conf
