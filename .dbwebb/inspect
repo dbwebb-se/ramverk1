@@ -25,6 +25,9 @@ ramverk1()
 ramverk1last()
 {
     inspectMe "me/redovisa/htdocs" "" "" "" "redovisa"
+
+    local path="me/redovisa"
+    fileIsReadable "$path/github.txt"
 }
 
 
@@ -36,10 +39,10 @@ function ramverk1repo()
 {
     local repo="$1"
     local target="me/$repo"
-    
-    headerForTest "-- Repo $repo" "-- ${DBW_WWW}$DBW_COURSE/$target" 
+
+    headerForTest "-- Repo $repo" "-- ${DBW_WWW}$DBW_COURSE/$target"
     openFilesInEditor "$target"
-    printUrl "" "$target"  
+    printUrl "" "$target"
 
     isGitRepo "$target"
     hasGitTagBetween "$EXEC_DIR/$repo" "$2" "$3" > /dev/null
