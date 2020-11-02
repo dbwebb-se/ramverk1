@@ -21,6 +21,8 @@ services:
 
     server:
         <<: *ramverk1
+        volumes:
+            - ./example/docker/site_default.conf:/etc/apache2/sites-enabled/000-default.conf
         ports:
             - "18080:80"
 
