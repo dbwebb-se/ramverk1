@@ -1,6 +1,12 @@
 Notes to lecture
 ======================
 
+* Kolla REM server
+    * https://rem.dbwebb.se/
+
+* Advanced REST client:
+    * https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo?hl=sv
+
 * make clean-all
 * make install
 * make test
@@ -19,9 +25,6 @@ Notes to lecture
 * Kopiera example/sample/{a,d}.
     * https://github.com/dbwebb-se/ramverk1/tree/master/example/sample
 
-* Advanced REST client:
-    * https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo?hl=sv
-
 * make test, kolla kodtäckningen
 
     * Titta kort på controller D
@@ -32,6 +35,8 @@ Notes to lecture
     * Titta på deras enhetstester
 
 * Visa hur inject fungerar till controller.
+
+* Bygg en mer felsäker JSON controller.
 
 
 
