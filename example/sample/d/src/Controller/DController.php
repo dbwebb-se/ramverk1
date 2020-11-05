@@ -44,8 +44,7 @@ class DController implements ContainerInjectableInterface
     public function getDetailsOnRequest(
         string $method,
         array $args = []
-    ) : string
-    {
+    ) : string {
         $request     = $this->di->get("request");
         $router      = $this->di->get("router");
         $path        = $request->getRoute();
