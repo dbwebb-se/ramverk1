@@ -16,7 +16,7 @@ These are the sample programs.
 
 | Sample | Description | Kmom |
 |:------:|-------------|------|
-| [a](a) | A controller doing redirect, with test cases showing off how to test a redirect. |
+| [a](a) | A controller doing redirect, with test cases showing off how to test a redirect. | kmom01 |
 | [b](b) | A controller using a model to retrieve information from an external REST server using `file_get_contents()`, `curl()` and `multi_curl()`. A test class for the controller. |
 | [c](c) | Use a class as a service in $di from a controller. Test the controller and the class. Use a mock class to hide the class when testing the controller. |
 | [d](d) | A sample controller with helper `getDetailsOnRequest()` which is useful for development and troubleshooting and might aid in the understanding of how the controller works. | kmom01 |
