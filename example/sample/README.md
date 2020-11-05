@@ -20,3 +20,4 @@ These are the sample programs.
 | [b](b) | A controller using a model to retrieve information from an external REST server using `file_get_contents()`, `curl()` and `multi_curl()`. A test class for the controller. |
 | [c](c) | Use a class as a service in $di from a controller. Test the controller and the class. Use a mock class to hide the class when testing the controller. |
 | [d](d) | A sample controller with helper `getDetailsOnRequest()` which is useful for development and troubleshooting and might aid in the understanding of how the controller works. | kmom01 |
+| [e](e) | A sample JSON controller with helper `getDetailsOnRequestData()` which is useful for development and troubleshooting and might aid in the understanding of how the controller works. | kmom01 |
