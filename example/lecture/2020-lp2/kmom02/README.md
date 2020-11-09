@@ -23,7 +23,7 @@ Tips
 ------------------------
 
 * Wrappa cURL i en egen klass.
-    * Se exmpel på CURL
+    * Se exempel på CURL
     * Lättare att testa, mocka?
 * Separera i egna modell-klasser.
     * Separata controllers
@@ -70,6 +70,10 @@ Visa hur man integrerar anax/remserver i sin egen Anax installation.
 Visa cURL med PHP (mot REM servern?)
 
 Exempelprogram som startar separat testserver för enhetstester?
+
+Hur göra egen configfil till en modell-klass eller tjänst.
+
+Hur lagra API-nyckel som privat en inchecak resurs?
 
 
 
