@@ -34,7 +34,7 @@ Kmom02
 ------------------------
 
 1. Lecture "Model View Controller (MVC)" talks about the MVC design pattern, design patterns in general, the design philosophy of SOLID and how to think about Cohesion and Coupling whan it comes to Software quality and metrics.
-    * Autumn 2020 - [slides](https://dbwebb-se.github.io/ramverk1/lecture/kmom02-mvc.html) and [recording](https://youtu.be/QML009daLeA)
+    * Autumn 2020 - [slides](https://dbwebb.se/repo/ramverk1/lecture/kmom02-mvc.html) and [recording](https://youtu.be/QML009daLeA)
 
 <!--
 * Design patterns, MVC + Solid
