@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="sv">
+<meta charset="utf-8" />
+<title> Unit testing | ramverk1</title>
+
+<!-- Mithril HTML Slideshow styles -->
+<link href="css/mithril-slideshow.css" rel="stylesheet" />
+
+<!-- Code formatting using highlight.js -->
+<link rel="stylesheet" href="css/default.css">
+<link rel="stylesheet" href="css/tomorrow.css">
+<script src="js/highlight.pack.js"></script>
+
+<!-- Text formatting using Markdown through showdown.js -->
+<script src="js/showdown.min.js"></script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# ramverk1
+## Unit testing
+### Mikael Roos
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Agenda
+
+* Unit test with phpunit
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Enhetstester
+
+* Hur nå 100% kodtäckning
+    * Städa
+    * Vikten av assertions?
+* Hur simulera GET, POST, SERVER i tester?
+    * Anax\Request
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Enhetstester...
+
+* Data provider i phpunit
+    * Se Anax\Request
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Enhetstester...
+
+* Testa kontroller-metod som gör redirect
+    * Anax\Request
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Enhetstester...
+
+* Testa med exit?
+* Testa echo?
+    * `ob_start()`
+    * `ob_get_contents()`
+    * `ob_end_clean()`
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Enhetstester...
+
+* Hur testa när man kör mot extern server?
+    * Har man tillgång till tjänsten?
+    * Kostnad?
+    * API begränsningar?
+    * Schysst att köra tester mot live server?
+* Mock
+    * Exempel MockGeoTagService
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Inject dependenies
+
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Avslutningsvis
+
+* Frågor på det?
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+</script>
+
+
+
+<!-- include essential js-script -->
+<script src="js/mithril.min.js"></script>
+<script src="js/mithril-slideshow.js"></script>
