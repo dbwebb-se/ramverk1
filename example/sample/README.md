@@ -38,4 +38,11 @@ Nästa vecka?
     * How to add special mocked configuration for test into di? how to setup the service to be loaded in di? (kmom04)
 
     * Fler exmepl på hur man jobbar med configfil, controller, model, di-tjänst.
+
+* Vilka exempel kan stödja kmom04 med modul?
+
+* Vilka exempel kan stödja travis/scutinizer tester i kmom05
+
+* Hur stödja när det kommer till tester rörande databasen i kmom06?
+
 -->
