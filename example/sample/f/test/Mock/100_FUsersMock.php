@@ -7,6 +7,9 @@ namespace Anax\Users;
  */
 class FUsersMock extends FUsers
 {
+    /**
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     */
     protected function doCurl(string $url) : string
     {
         $data = <<<EOD

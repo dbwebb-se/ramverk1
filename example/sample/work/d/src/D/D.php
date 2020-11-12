@@ -13,6 +13,8 @@ namespace Anax\D;
  * support for setDI().
  *    implements ContainerInjectableInterface
  *    use ContainerInjectableTrait
+ *
+ * @SuppressWarnings(PHPMD.ShortClassName)
  */
 class D
 {
