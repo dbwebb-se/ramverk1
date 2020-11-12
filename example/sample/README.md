@@ -21,18 +21,21 @@ These are the sample programs.
 | [c](c) | Use a class as a service in $di from a controller. Test the controller and the class. Use a mock class to hide the class when testing the controller. | kmom02, kmom03 |
 | [d](d) | A sample controller with helper `getDetailsOnRequest()` which is useful for development and troubleshooting and might aid in the understanding of how the controller works. | kmom01 |
 | [e](e) | A sample JSON controller with helper `getDetailsOnRequestData()` which is useful for development and troubleshooting and might aid in the understanding of how the controller works. | kmom01 |
+| [f](f) | Unit test controller and model which uses an external server and using mock classes. | kmom02, kmom03, kmom04 |
 
 <!--
 * Model class that reads from a configuration file, including private API keys.
     * Use to test towards testserver instead of real server.
 
 Nästa vecka?
-* Controller som läser inställningar från konfigurationsfil?
+* Controller/model/di som läser inställningar från konfigurationsfil?
 
-* Hur testa modell-klass som går mot extern server?
-
-    * Hur ladda en mockad klass för tester, när det gäller controller, när det gäller en model-klass?
+* Hur testa controller/modell-klass som går mot extern server?
+    * Inklusive server på travis? Starta upp egen dummy testserver
 
     * Hur ladda en model-klass med en alternativ konfigurationsfil?
 
+    * How to add special mocked configuration for test into di? how to setup the service to be loaded in di? (kmom04)
+
+    * Fler exmepl på hur man jobbar med configfil, controller, model, di-tjänst.
 -->
