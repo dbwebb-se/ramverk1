@@ -29,18 +29,26 @@ Open a webbrowser and try the following urls.
 * c/di (use $di service to show a message)
 * c/dicfg (use $di service and use configuration file to display a custom message)
 
+
+
+### make test
+
 Do a make test or test only the related testclass.
 
-
-Test the controller, first by using the actual class and then replacing the actual class with a mocked class.
+Test the controller (and the model it uses).
 
 ```
 make phpunit options="test/Controller/CControllerTest.php"
-make phpunit options="test/Controller/CControllerMockedTest.php"
 ```
 
-Only test the class, as is.
+Only test the model class, as is.
 
 ```
 make phpunit options="test/Mumin/MuminTest.php"
+```
+
+Test the controller and replace the model class with a mocked class, to make it easier to verify that the controller works, without using the (complex) model class.
+
+```
+make phpunit options="test/Controller/CControllerMockedTest.php"
 ```
