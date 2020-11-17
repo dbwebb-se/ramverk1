@@ -1,12 +1,12 @@
 Välkommen till kursen ramverk1!
 
-Jag kollade snabbt igenom din inlämning och utskrifterna från "dbwebb inspect" så att alla saker ligger på rätt plats och att filerna validerar.
+Jag kollade snabbt igenom din inlämning så att alla saker ligger på rätt plats och att filerna validerar.
 
 Jag kollade igenom din redovisningstext (via studentservern) så att allt såg bra ut.
 
-Jag kikade på din GitHub och såg att sakerna fanns på plats och titta en extra gång på dina commits.
+Jag kikade på din GitHub och såg att sakerna fanns på plats och jag tittade en extra gång på dina commits och taggar.
 
-Jag kollade in din uppgift så att det fungerade och att felfall hanterades med exception.
+Jag kollade in din för IP-valideringen och såg att den motsvarar kraven.
 
 Kör på.
 

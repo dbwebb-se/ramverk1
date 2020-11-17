@@ -17,10 +17,10 @@
 /example/**
 
 /me/
-- /me/anax/.bin
-- /me/anax/build
-- /me/anax/theme
-- /me/anax/cache/cimage/*
+- /me/redovisa/.bin
+- /me/redovisa/build
+- /me/redovisa/theme
+- /me/redovisa/cache/cimage/*
 - vendor/mos/cimage/webroot
 - vendor/**/config
 - vendor/**/docs
