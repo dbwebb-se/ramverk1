@@ -6,7 +6,9 @@ Jag kollade igenom din redovisningstext (via studentservern) så att allt såg b
 
 Jag kikade på din GitHub och såg att sakerna fanns på plats och jag tittade en extra gång på dina commits och taggar.
 
-Jag kollade in din för IP-valideringen och såg att den motsvarar kraven.
+Jag kollade in din för IP-valideringen och såg att den motsvarar kraven och att jag kunde se både webb-delen och REST-delen.
+
+Jag körde också igenom din 'make test' för att kika på din kodtäckning och hur många testfall du har.
 
 Kör på.
 

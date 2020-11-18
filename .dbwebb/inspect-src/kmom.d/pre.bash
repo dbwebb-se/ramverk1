@@ -19,27 +19,23 @@ printf ">>> -------------- Pre (all kmoms) ----------------------\n"
 
 # Open me/redovisa
 url="$REDOVISA_HTTP_PREFIX/~$ACRONYM/dbwebb-kurser/$COURSE/$REDOVISA_HTTP_POSTFIX/htdocs"
-printf "$url\n" 2>&1
-eval "$BROWSER" "$url" &
+openUrl "$url"
+
+# Code coverage
+url="$url/../build/coverage/index.html"
+openUrl "$url"
 
 # Open github
-url=$( cat me/redovisa/github.txt )
-printf "$url/commits/master\n" 2>&1
-eval "$BROWSER" "$url/commits/master" &
+url=$( cd me/redovisa && git config --get remote.origin.url )
+openUrl "$url"
 
 # Do different things depending on kmom
 case $KMOM in
     kmom01)
     ;;
     kmom03)
-        # url="$DIR/me/redovisa/build/coverage/index.html"
-        # printf "$url\n" 2>&1
-        # eval "$BROWSER" "$url" &
     ;;
     kmom10)
-        url="$REDOVISA_HTTP_PREFIX/~$ACRONYM/dbwebb-kurser/$COURSE/kmom10/htdocs"
-        printf "$url\n" 2>&1
-        eval "$BROWSER" "$url" &
     ;;
 esac
 
