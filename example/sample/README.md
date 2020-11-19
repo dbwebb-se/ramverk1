@@ -22,6 +22,7 @@ These are the sample programs.
 | [d](d) | A sample controller with helper `getDetailsOnRequest()` which is useful for development and troubleshooting and might aid in the understanding of how the controller works. | kmom01 |
 | [e](e) | A sample JSON controller with helper `getDetailsOnRequestData()` which is useful for development and troubleshooting and might aid in the understanding of how the controller works. | kmom01 |
 | [f](f) | Unit test controller and model which uses an external server and using mock classes. | kmom02, kmom03, kmom04 |
+| [g](g) | This sample shows various ways to setup and use services within the framework and how these services can be loaded into $di and configured from configuration files. | kmom03, kmom04 |
 
 <!--
 * Model class that reads from a configuration file, including private API keys.
