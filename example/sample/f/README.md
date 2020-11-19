@@ -47,10 +47,16 @@ One testcase shows how the controller is tested, and as a consequence the model 
 make phpunit options="test/Controller/FControllerAndModelTest.php"
 ```
 
-One testcase shows how the model is tested in isolation.
+One testcase shows how the model is tested in isolation, but the real server is used.
 
 ```
-make phpunit options="test/Controller/FModelTest.php"
+make phpunit options="test/Model/FModelTest.php"
+```
+
+One testcase shows how the model is tested in isolation AND without using the external API server by mocking the curl requests.
+
+```
+make phpunit options="test/Model/FModelNoRealServerTest.php"
 ```
 
 The final testcase shows how the controller is tested in isolation using a mockController and a mockModel avoiding real access to the REST server.
