@@ -1,12 +1,12 @@
 Då tar vi kmom02.
 
-Som vanligt kollar jag igenom din inlämning med "dbwebb inspect" så att allt ligger på plats och validerar.
+Jag läser igenom din redovisningstext så att den håller måttet.
 
-Jag kollar igenom din redovisningstext så att allt ser bra ut.
+Jag kollar in taggar och committs på ditt repo.
 
-Jag kikade på din GitHub och såg att sakerna fanns på plats och titta en extra gång på dina commits och taggar.
+Jag körde igenom din 'make test' för att kika på kodtäckning och antal testfall.
 
-Jag kollade in ditt spel så att det fanns integrerat i me-sidan.
+Sedan testar jag geotaggningen av webbtjänster för att se att den motsvarar kraven för både webb-delen och REST-delen.
 
 Gott kämpat, kör på.
 
