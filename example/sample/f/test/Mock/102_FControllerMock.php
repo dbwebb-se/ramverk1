@@ -13,5 +13,6 @@ class FControllerMock extends FController
     {
         parent::initialize();
         $this->userContainer = new FUsersMock();
+        $this->userContainer->setApiUrl("");
     }
 }

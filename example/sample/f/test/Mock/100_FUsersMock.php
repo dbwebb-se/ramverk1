@@ -12,7 +12,7 @@ class FUsersMock extends FUsers
      */
     protected function doCurl(string $url) : string
     {
-        var_dump($url);
+        //var_dump($url);
         $data = [];
         $data["/1"] = <<<EOD
         {
