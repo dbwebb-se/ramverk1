@@ -5,8 +5,6 @@ namespace Anax\Controller;
 use Anax\Commons\ContainerInjectableInterface;
 use Anax\Commons\ContainerInjectableTrait;
 use Anax\Service\G1Service;
-use Anax\Service\G2Service;
-use Anax\Service\G3Service;
 
 /**
  * A test controller to show off using a $di service class.
