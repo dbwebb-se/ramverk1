@@ -25,6 +25,11 @@ These are the sample programs.
 | [g](g) | This sample shows various ways to setup and use services within the framework and how these services can be loaded into $di and configured from configuration files. | kmom03, kmom04 |
 
 <!--
+* En modellklass som läser en konfigurationsfil på egen hand. Använder interface/trait för att konfigurera sig. (kmom02)
+
+* DI / config som har en egen konfiguration för testningen.
+
+
 * Model class that reads from a configuration file, including private API keys.
     * Use to test towards testserver instead of real server.
 
