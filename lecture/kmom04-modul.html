@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="sv">
+<meta charset="utf-8" />
+<title>Modul | ramverk1</title>
+
+<!-- Mithril HTML Slideshow styles -->
+<link href="css/mithril-slideshow.css" rel="stylesheet" />
+
+<!-- Code formatting using highlight.js -->
+<link rel="stylesheet" href="css/default.css">
+<link rel="stylesheet" href="css/tomorrow.css">
+<script src="js/highlight.pack.js"></script>
+
+<!-- Text formatting using Markdown through showdown.js -->
+<script src="js/showdown.min.js"></script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Kursen ramverk1
+## Modul
+### Mikael Roos
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Agenda
+
+* Förra veckan
+* Modul
+* Packagist
+* Composer
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Något från förra veckan?
+
+* $di
+* `config/`
+* $di->get("configure")
+* testning
+* mvc, solid, cohesion, coupling, cyclomatic complexity
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Denna vecka
+
+* _Dependencies_
+* Modul
+* Composer
+* Packagist
+* Semantic versioning
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Proxy (anax/proxy)
+
+* Låt oss prata lite designmönster, dependencies (och moduler)...
+* [anax/proxy](https://github.com/canax/proxy)
+* Ett alternativ till att nå ramverkets tjänster
+* (Diskussion om [Laravel Facade versus Proxy](https://stackoverflow.com/questions/17332322/does-facade-in-laravel-implements-facade-or-proxy-pattern))
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Ramverk i moduler (anax/anax)
+
+* Hur dela upp moduler?
+* [anax/anax](https://github.com/canax/anax)
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Modul
+
+* Varför?
+* Fördel
+* Nackdel
+* Alternativ?
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# [PHP FIG](https://www.php-fig.org/)
+
+* Återanvändbara moduler genom interface och samrbetsdiskussioner
+* "Hur bygger man ett bra ramverk?"
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# [Packagist](https://packagist.org/)
+
+* Paket för PHP moduler och utilitites
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# [Composer](https://getcomposer.org/)
+
+* Installera paket från Packagist
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# [Semantic Versioning](https://semver.org/)
+
+* Kom överens om hur versionsnummer fungerar och används
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Övning kmom04
+
+* Arbetssätt för att jobba effektivt med moduler i olika lägen
+* Hämta dev-master
+* Hämta lokalt filsystem
+* Hämta Packagist
+* composer.json
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Övning kmom04...
+
+* Scaffolding
+* Automatisera kopierande och vanligt förekommande installationsrutiner
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Installera modul
+
+* Dokumentation (för din och andras del)
+* Hur installera modulen?
+* Hur koppla sig mot en befintlig installation?
+* Vad behöver konfigureras?
+* README.md
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Frikoppla modul
+
+* Hur tänka kring rem.dbwebb.se?
+* Hur organisera modul versus driftsmiljön?
+* [anax/remserver](https://github.com/canax/remserver)
+* [anax/remserver-website](https://github.com/canax/remserver-website)
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Enhetstester
+
+* 100% kodtäckning inte orimligt
+* Beroende av $di, hur hantera?
+* Komplett testsuite för modulen
+* Testa modulen i "isolation"
+* Regression test vid uppdateringar
+* Kodtäckning versus asserts
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Kodkvalitet
+
+* Scrutinizer säger 10/10 för [remservern](https://github.com/canax/remserver)
+* Se vad rapporten genererar
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Lokal utvecklingsmiljö
+
+* Poängtera vikten av en lokal utvecklingsmiljö
+* `make install`, `make test`
+* Docker
+* (phpmetrics)
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Uppgift kmom04
+
+* Gör modul av koden
+* Lyft bort koden från redovisa
+* Eget repo GitHub
+* Publicera Packagist
+* Dokumentera installationsinstruktion
+* Åter installera med composer
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Uppgift kmom05
+
+* Continous integration
+* Bygg egen CI kedja för modulen.
+* Integrera med Travis, CircleCI, Scrutinizer, mfl.
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Avslutningsvis
+
+* Frågor på det?
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+</script>
+
+
+
+<!-- include essential js-script -->
+<script src="js/mithril.min.js"></script>
+<script src="js/mithril-slideshow.js"></script>
