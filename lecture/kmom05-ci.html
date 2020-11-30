@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="sv">
+<meta charset="utf-8" />
+<title>CI | ramverk1</title>
+
+<!-- Mithril HTML Slideshow styles -->
+<link href="css/mithril-slideshow.css" rel="stylesheet" />
+
+<!-- Code formatting using highlight.js -->
+<link rel="stylesheet" href="css/default.css">
+<link rel="stylesheet" href="css/tomorrow.css">
+<script src="js/highlight.pack.js"></script>
+
+<!-- Text formatting using Markdown through showdown.js -->
+<script src="js/showdown.min.js"></script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Kursen ramverk1
+## CI
+### Mikael Roos
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Agenda
+
+* Status
+* Orientering termer
+* CI
+* Exempel bygg- och kvalitetstjänster
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Status
+
+* kmom06
+    * Databasmodeller
+    * Scaffolding av CRUD
+* kmom10
+    * släpps nästa vecka
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Minns föregående kmom
+
+* 01, 02: MVC
+* 02: Solid, Cohesion, Coupling
+* 03: $di, `config/`
+* 04: Fristående modul
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# 05: CI
+
+* Begreppet CI
+* make install test
+* Automatisera flödet
+* Vad är bra kod?
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Orientering termer
+
+* CI
+* devops
+* Test och systemverifiering
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Continuous Integration
+
+* CI
+* Se till att din kod "håller ihop" vid varje givet tillfälle
+* Automatisera som en kvalitetsåtgärd
+* Kedja av händelser som kan leda till driftsättning
+
+* git commit && git push -> automatiserat bygge på Travis
+
+</script>
+
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Developer Operations
+
+* devops
+* Samarbeta över hela applikationens livsscykel
+* Automatisering av infrastruktur (bygg, test, driftsättning)
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Test och systemverifiering
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Olika typer av tester
+
+* Enhetstester, funktionstester, integrationstester, installationstester, systemtester
+* User interface tests (Selenium)
+* Prestandatester (för mindre enheter och för hela system)
+* [phpbenchmarks](http://www.phpbenchmarks.com/en/) ([ab](https://httpd.apache.org/docs/2.4/programs/ab.html))
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Testdriven utveckling
+
+* TDD, Test Driven Development
+* BDD, Behaviour driven development
+* Behaviour/Feature test ([behat](http://behat.org))
+* Se [behat-tester i Cimage](https://github.com/mosbth/cimage/tree/resize)
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# CI med externa verktyg
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# CI verktyg
+
+* Travis
+* CircleCI
+* Scrutinizer
+* Code Climate
+* Codacy
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# CI verktyg...
+
+Två exempel
+
+* [anax/remserver](https://github.com/canax/remserver)
+* [Cimage branch resize](https://github.com/mosbth/cimage)
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Code quality
+
+* Unit test `make test`
+* (Static) code analysis (php, phpcs, phpcpd, phpmd, phpstan)
+* Metrics (phploc, pdepend)
+* Code smells, bad usage
+* Code complexity
+* Metrics for cohesion/coupling
+* (phpmetrics)
+* (phpdox, phpdoc)
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Avslutningsvis
+
+* Frågor på det?
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+</script>
+
+
+
+<!-- include essential js-script -->
+<script src="js/mithril.min.js"></script>
+<script src="js/mithril-slideshow.js"></script>

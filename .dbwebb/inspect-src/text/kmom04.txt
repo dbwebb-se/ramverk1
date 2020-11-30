@@ -1,11 +1,12 @@
 Låt se hur kmom04 föll ut.
 
-Som vanligt kollar jag utskriften från din "dbwebb inspect". Jag vill se att allt validerar, mer eller mindre.
+Jag tittar främst på din module och hur du integrerat den i me/redovisa och hur du städat upp i me/redovisa.
 
-Redovisningstexten läses igenom för att se hur du upplevde kursmomentet och för att se att texten "håller måttet".
+Jag kikar på dina taggar och commits så att det ser ordnat ut.
 
-Jag kikar som vanligt på dina committs och taggar på GitHub. Kom ihåg att göra små committs och göra dem ofta efter varje relevant ändring med tydliga meddelanden.
+Jag läser igenom redovisningstexten och vill gärna se en väl formulerad sådan.
 
+Avslutningsvis kollar jag in din väderapplikation och ditt REST API och ser att det fungerar som tidigare.
 
 Kämpa på, gott jobbat så här långt.
 

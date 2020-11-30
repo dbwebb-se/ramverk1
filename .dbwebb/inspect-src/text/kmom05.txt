@@ -1,8 +1,8 @@
-Då tar kursen en liten ny vändning med kmom05.
+Då avslutar vi modul-delen med kmom05 och CI.
 
-Jag kör en "dbwebb inspect", läser igenom redovisningstexten och slänger ett öga på dina taggar och commit-historik på GitHub.
+Jag läser igenom redovisningstexten för att se hur du upplevde momentet.
 
-Jag tittar på uppgiften så att den ser okey ut i förhållande till specen.
+Jag utgår från din modul och tittar på de byggtjänster du integrerad och vilka siffror som de visar.
 
 Jobba på.
 

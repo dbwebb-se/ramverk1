@@ -37,7 +37,7 @@ hasGitTagBetween()
     fi
 
     if [ "$success" = "false" ]; then
-        printf "$MSG_FAILED Failed to validate tag exists >=%s and <%s." "$2" "$3"
+        return
     fi
 
     echo $highestTag
@@ -56,4 +56,34 @@ function getSemanticVersion
     #local version=${1:1}
     local version=$( echo $1 | sed s/^[vV]// )
     echo "$version" | awk -F. '{ printf("%03d%03d%03d\n", $1,$2,$3); }'
+}
+
+
+
+#
+# Get the main/master branch
+#
+# @arg1 string the path to the dir to check.
+#
+function getMainOrMasterBranch
+{
+    local where="$1"
+    local branches=$( cd "$where" && git branch )
+    local master=$( cd "$where" && git branch | grep -E 'master|main' | cut -c2- )
+
+    echo $master
+}
+
+
+
+#
+# Add newline if it does not exists.
+#
+# @arg1 string to add a newline if it does not exists.
+#
+function addNewline
+{
+    string=$(printf "%s" "$1"; echo x)
+    string=${string%x}
+    printf '%s\n' "$string"
 }

@@ -9,34 +9,38 @@
 #   $ACRONYM
 #   $REDOVISA_HTTP_PREFIX
 #   $REDOVISA_HTTP_POSTFIX
+#   $LOG_DOCKER
 #   eval "$BROWSER" "$url" &
+#   openUrl "$url"
+#   openSpecificUrl "$DIR" "me/redovisa" "build/coverage/index.html"
 #
-printf ">>> -------------- Pre (all kmoms) ----------------------\n"
+#printf ">>> -------------- Pre (all kmoms) ----------------------\n"
 
-# # Open localhost:1337 in browser
-# printf "Open localhost:1337/eshop/index in browser\n"
-# eval "$BROWSER" "http://127.0.0.1:1337/eshop/index" &
+# Open log
+echo "[$ACRONYM]" > "$LOG_DOCKER"
 
 # Open me/redovisa
 url="$REDOVISA_HTTP_PREFIX/~$ACRONYM/dbwebb-kurser/$COURSE/$REDOVISA_HTTP_POSTFIX/htdocs"
 openUrl "$url"
 
 # Code coverage
-url="$url/../build/coverage/index.html"
-openUrl "$url"
+openUrl "file://$DIR/me/redovisa/build/coverage/index.html"
 
 # Open github
 url=$( cd me/redovisa && git config --get remote.origin.url )
-openUrl "$url"
+openGitUrl "$url"
 
 # Do different things depending on kmom
 case $KMOM in
-    kmom01)
-    ;;
+    kmom04)
+        if [[ -d $DIR/me/module ]]; then
+            openUrl "file://$DIR/me/module/build/coverage/index.html"
+            url=$( cd me/module && git config --get remote.origin.url )
+            openGitUrl "$url"
+        fi
+        ;;
     kmom03)
     ;;
     kmom10)
     ;;
 esac
-
-echo
