@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="sv">
+<meta charset="utf-8" />
+<title>Databasmodeller | ramverk1</title>
+
+<!-- Mithril HTML Slideshow styles -->
+<link href="css/mithril-slideshow.css" rel="stylesheet" />
+
+<!-- Code formatting using highlight.js -->
+<link rel="stylesheet" href="css/default.css">
+<link rel="stylesheet" href="css/tomorrow.css">
+<script src="js/highlight.pack.js"></script>
+
+<!-- Text formatting using Markdown through showdown.js -->
+<script src="js/showdown.min.js"></script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Kursen ramverk1
+## Databasmodeller
+### Mikael Roos
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Agenda
+
+* Status
+* Projektet
+* Scaffolding
+* Databasmodeller
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Status
+
+* Travis Xdebug v3.0.1
+
+* God kod
+* Testbar kod
+* Cohesion, coupling, cyclomatic complexity
+* Inject dependencies
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# 07/10 Projekt
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# 07/10 Projekt
+
+* Bygg kopia Stackoverflow
+* Fråga, svar, kommentarer
+* Databas
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# 06 Databasdrivna modeller
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Problemformulering?
+
+* CRUD
+* Repetitiv kod
+* Formulärhantering
+* Objektorientering versus relationer
+    * Koppla data i databasen
+* Stödja olika databaser
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Lösning?
+
+* Jobba på som vanligt (copy & paste)?
+* "Smart kod" (bygg för återanvändning)
+* Scaffolding
+* Object relational mapping (ORM)
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Scaffolding
+
+* Bygger på kända/repetitiva kodstrukturer
+* Generera kod enligt templates
+* Variant av återanvändning
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# [anax/htmlform](https://packagist.org/packages/anax/htmlform)
+
+* Skapa formulär programatiskt
+* Andra exempel
+    * Drupal
+    * Django (python)
+    * Fristående libb
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# [anax/database](https://packagist.org/packages/anax/database)
+
+* Database access layer (DAL, DBAL, DBA)
+* Konfigurationsfiler
+* Connect, execute
+* Förenkla PDO
+* Förenkla debugging
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# anax/database
+
+```
+$db = $di->get("db");
+$db->connect();
+$sql = "SELECT * FROM user WHERE id = 1;";
+$res = $db->executeFetch($sql);
+```
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# [anax/database-query-builder](https://packagist.org/packages/anax/database-query-builder)
+
+* Designmönster Query Object
+* Dölj SQL bakom metodanrop
+* Koda OO-metoder istället för SQL
+* Bygger på anax/database
+* Databasagnostic (kompatibel SQL mellan databaser)
+
+</script>
+
+
+<script data-role="slide" data-markdown type="text/html">
+# anax/database-query-builder
+
+```
+$res = $this->db->select("*")
+                ->from("user")
+                ->where("id = 1")
+                ->execute()
+                ->fetch();
+```
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# [anax/database-active-record](https://packagist.org/packages/anax/database-active-record)
+
+* Active Record designmönster
+* Bygger på anax/database-query-builder
+* Koda OO klasser/metoder och dölj lagringen
+
+</script>
+
+
+<script data-role="slide" data-markdown type="text/html">
+# anax/database-active-record
+
+```
+$user = new User();
+$user->setDb($this->di->get("dbqb")); // inject querybuilder
+
+$user->acronym = $acronym;
+$user->setPassword($password);
+$user->save();
+```
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Object Relational Mapping (ORM)
+
+* "ORM is a technique for solving the commonly occurring problem of converting data between incompatible type systems and objects in oop languages."
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# ORM designmönster
+
+* Designmönster (se [eaaCatalog](https://martinfowler.com/eaaCatalog/))
+    * Active Record
+    * Data Mapper
+    * Repository
+* Laravel Eloquent ORM (active record)
+* (Symfony) Doctrine ORM (repository)
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# [anax/scaffold](https://github.com/canax/scaffold)
+
+* Templates för kodgenerering
+* Titta på [ramverk1-crud-v2](https://github.com/canax/scaffold/tree/master/scaffold)
+* Kräver ett [anax-cli](https://github.com/canax/anax-cli)
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Designmönster
+
+* Intressera dig för att läsa andras kod
+* Studera andras kod och designmönster är en bra väg att bli en bättre programmerare.
+* Kika på ledande ramverk och de moduler de använder
+* Ha koll på diskussioner likt PHP-FIG och PSR
+* Studera designmönster
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Kritik
+
+* [Kritik/förslag modulen anax/htmlform](https://dbwebb.se/t/6820)
+* [Kritik/förslag modulen anax/database Active Record](https://dbwebb.se/t/6821)
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Avslutningsvis
+
+* Frågor på det?
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+</script>
+
+
+
+<!-- include essential js-script -->
+<script src="js/mithril.min.js"></script>
+<script src="js/mithril-slideshow.js"></script>
