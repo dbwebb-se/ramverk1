@@ -1,21 +1,22 @@
 <?php declare(strict_types=1);
+// @codingStandardsIgnoreStart
 
-class A
+class Aaa
 {
-    function m1()
+    public function method()
     {
         echo __METHOD__ . "\n";
     }
 }
 
-class B extends A
+class Bbb extends Aaa
 {
-    function m1($a = null) : string
+    public function method($var = null) : string
     {
         echo __METHOD__ . "\n";
         return "a string";
     }
 }
 
-$obj = new B();
-$obj->m1();
+$obj = new Bbb();
+$obj->method();
